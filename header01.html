@@ -13,28 +13,38 @@
 
 <body>
 
-    <header>
-        <nav class="navbar">
-            <div class="dropdown w-215 ta-r">
-                <select name="selection">
-                    <option value="" selected>&#9776;</option>
-                    <option value="">Home</option>
-                    <option value="">About Us</option>
-                    <option value="">Contact Us</option>
-                </select>
-            </div>
-            <a href="#" class="w-215 ta-l"><strong>SHOP</strong></a>
-            <div class="w-500 ta-c"><img class="logo" src="assets/images/woven.png" alt="logo of woven" /></div>
-            <div class="searchform">
-                <form>
-                    <input type="search" name="query" placeholder="Enter Your Search Here..." />
-                    <label><button><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i></button></label>
-                </form>
-            </div>
-            <a href="#" class="w-215 ta-l"><strong>CART</strong></a>
-
-        </nav>
+    <header class="container">
+        <div class="one hide">
+            <nav class="navbar">
+                <div class="dropdown">
+                    <select name="selection">
+                        <option value="" selected>&#9776;</option>
+                        <option value="">Home</option>
+                        <option value="">About Us</option>
+                        <option value="">Contact Us</option>
+                    </select>
+                </div>
+                <a href="#" style="font-size: 18px; padding-left: 40px;"><strong>SHOP</strong></a>
+                <div><img class="logo" src="assets/images/woven.png" alt="logo of woven" /></div>
+                <div class="searchform">
+                    <form>
+                        <input type="search" name="query" placeholder="Enter Your Search Here..." />
+                        <label><button><i class="fa-solid fa-magnifying-glass fa-lg"
+                                    style="color: #000000;"></i></button></label>
+                    </form>
+                </div>
+                <a href="#" style="font-size: 18px; padding-left: 5px;"><strong>CART</strong></a>
+            </nav>
+        </div>
     </header>
+    <button class="open-btn">Button</button>
+    <script>
+        document.querySelectorAll('.open-btn').forEach(btn =>
+            btn.addEventListener('click', e => {
+                btn.parentElement.querySelector('.one').classList.toggle('hide');
+            })
+        );
+    </script>
 </body>
 
 </html>
